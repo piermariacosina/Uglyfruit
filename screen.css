@@ -48,6 +48,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 body.susy {
   background: #d6e1d0 url('images/bkgr.png?1350298196') repeat left top; }
 
+.left-shade {
+  width: 21px;
+  height: 1021px; }
+
+.right-shade {
+  width: 21px;
+  height: 1021px; }
+
 #page .container {
   *zoom: 1;
   max-width: 790px;
@@ -107,8 +115,8 @@ body.susy {
     _width: 790px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 30px;
-    padding-right: 30px; }
+    padding-left: 10px;
+    padding-right: 10px; }
     #page #colophon .footer:after {
       content: "";
       display: table;

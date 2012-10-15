@@ -30,7 +30,14 @@ body.susy {
 	
 }
 
-
+.left-shade{
+	width: image-width("shade_left.png");
+	height: image-height("shade_left.png");
+}
+.right-shade{
+	width: image-width("shade_right.png");
+	height: image-height("shade_left.png");
+}
 
 
 #page {
