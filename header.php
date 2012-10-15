@@ -82,6 +82,6 @@
 			</nav><!-- #access -->
 		</div>
 	</header><!-- #branding -->
-
+	<div id="header-shade"></div>
 	<div id="main">
 	<div class="container">
