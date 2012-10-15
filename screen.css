@@ -76,11 +76,6 @@ body.susy {
     clear: both; }
 #page header, #page footer {
   clear: both; }
-#page #header-shade {
-  background: url('images/shade_top.png?1350298315') repeat-x left top;
-  height: 30px;
-  margin-bottom: -30px;
-  position: relative; }
 #page nav {
   width: 23.72881%;
   float: left;
@@ -117,7 +112,8 @@ body.susy {
       text-transform: uppercase;
       color: #1cdd89;
       margin-top: 10px;
-      margin-bottom: 10px; }
+      margin-bottom: 10px;
+      font-family: titilliumtext22l400_wt; }
     #page #colophon .footer .contatti {
       display: inline;
       float: left;

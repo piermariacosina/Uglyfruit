@@ -31,8 +31,6 @@ body.susy {
 }
 
 
-
-
 #page {
   // page acts as a container for our grid.
 	.container{
@@ -41,15 +39,7 @@ body.susy {
 	}
   // header and footer are full-width by default.
   header, footer { clear: both; }
-	
-	
-	#header-shade{
-		background: image-url("shade_top.png") repeat-x left top;
-		height: image-height("shade_top.png");
-		margin-bottom: - image-height("shade_top.png");
-		position: relative;
-	}
-	
+
   // nav spans 3 columns of total 12.
   nav { @include span-columns(3,12); }
 	#branding{
@@ -73,6 +63,7 @@ body.susy {
 			color: $green;
 			margin-top:10px;
 			margin-bottom:10px;
+			font-family:titilliumtext22l400_wt;
 			}
 		.contatti{
 			@include float-left;
