@@ -2,6 +2,7 @@
 get_header(); ?>
 		<div class="left-shade"></div>
 		<div id="primary">
+			<div class="orange_header"></div>
 			<div id="content" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>

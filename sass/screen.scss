@@ -115,10 +115,13 @@ body.susy {
 		
 			#primary{
 				@include float-left;
-				@include span-columns(12);
+				@include span-columns(16);
+
+				min-height: image-height("shade_right.png");
+			}
+			#content{
 				@include pre(2);
 				@include post(2);
-				min-height: image-height("shade_right.png");
 			}
 		}
 		
@@ -194,3 +197,10 @@ body.susy {
 		}
 	}
 }
+.orange_header{
+			background: image-url('orange_header.png') no-repeat;
+			height:image-height("orange_header.png");
+			@include span-columns(16);
+			margin-left:-10px;
+			margin-right:-10px;
+		}
