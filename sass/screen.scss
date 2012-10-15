@@ -1,0 +1,60 @@
+@import "compass/reset";
+
+@import "compass/typography/text/replacement";
+@import "compass/typography/lists/bullets";
+@import "compass/typography/vertical_rhythm";
+@import "compass/typography/lists/horizontal-list";
+@import "compass/typography/links/link-colors";
+@import "compass/css3/box-shadow";
+@import "compass/css3/border-radius";
+@import "compass/css3/opacity";
+@import "compass/utilities/general/clearfix";
+@import "susy";
+
+
+@import "partials/grid";
+
+//*COLORS*
+$purple: #5A297E;
+$yellow: #FFA81E;
+$green: #1CDD89;
+$orange: #CE4612;
+$sand: #E0EADA;
+$pale: #D6E1D0;
+@mixin background-sprite($map){
+	background-image: sprite-url($map);
+} 
+
+body.susy {
+	background: $pale image-url('bkgr.png') repeat left top;
+	
+}
+
+
+#page {
+  // page acts as a container for our grid.
+	.container{
+		@include container;
+		@include susy-grid-background;
+	}
+  // header and footer are full-width by default.
+  header, footer { clear: both; }
+
+  // nav spans 3 columns of total 12.
+  nav { @include span-columns(3,12); }
+	#branding{
+		background-color: $purple;
+		
+		#site-title{
+			@include replace-text-with-dimensions('logo.png');
+		}
+	}
+	#main{
+		.container{
+		background: $sand image-url('bkgr_center.png') repeat left top;
+		}
+	}
+	#colophon{
+		background-color: $yellow;
+	}
+}
