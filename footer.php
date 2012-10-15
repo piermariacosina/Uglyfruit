@@ -16,11 +16,13 @@
 		<div class="footer">
 			<div class="uglyfruit">
 				<h2>uglyfruit</h2>
-				<p></p>
+				<p> Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut</p>
 			</div>
 			<div class="contatti">
 				<h2>Contatti</h2>
-				<p>tel 0119366526</p>
+				<p>Tel 0119366526</p>
+				<p>Tel 0119366526</p>
+				<p>Partita IVA 177443322</p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

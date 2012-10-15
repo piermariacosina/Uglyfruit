@@ -13,6 +13,7 @@
 
 
 @import "partials/grid";
+@import "partials/fonts";
 
 //*COLORS*
 $purple: #5A297E;
@@ -75,21 +76,31 @@ body.susy {
 		background-color: $yellow;
 		.footer{
 		@include container;
+		@include susy-grid-background;
 		h2{
 			text-transform:uppercase;
-			color: $green;
+			color: green;
 			margin-top:10px;
 			margin-bottom:10px;
+			font-family:arvil_sansregular;
+			font-size:30px;
 			}
+			
+		p{
+			font-family:titilliumtext22l400_wt;
+			font-size:13px;
+			color: grey;
+		}
 		.contatti{
 			@include float-left;
 			@include pre(1); 
+			@include span-columns(3);
 		}
 		
 		.uglyfruit{
 			@include float-left;
 			@include pre(2);
-			width: columns(3);
+			@include span-columns(3);
 		}
 		}
 	}
