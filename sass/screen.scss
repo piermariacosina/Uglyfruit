@@ -66,5 +66,24 @@ body.susy {
 	}
 	#colophon{
 		background-color: $yellow;
+		.footer{
+		@include container;
+		h2{
+			text-transform:uppercase;
+			color: $green;
+			margin-top:10px;
+			margin-bottom:10px;
+			}
+		.contatti{
+			@include float-left;
+			@include pre(1); 
+		}
+		
+		.uglyfruit{
+			@include float-left;
+			@include pre(2);
+			width: columns(3);
+		}
+		}
 	}
 }

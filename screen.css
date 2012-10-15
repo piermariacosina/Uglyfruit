@@ -101,3 +101,29 @@ body.susy {
   background: #e0eada url('images/bkgr_center.png?1350298112') repeat left top; }
 #page #colophon {
   background-color: #ffa81e; }
+  #page #colophon .footer {
+    *zoom: 1;
+    max-width: 790px;
+    _width: 790px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 30px;
+    padding-right: 30px; }
+    #page #colophon .footer:after {
+      content: "";
+      display: table;
+      clear: both; }
+    #page #colophon .footer h2 {
+      text-transform: uppercase;
+      color: #1cdd89;
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    #page #colophon .footer .contatti {
+      display: inline;
+      float: left;
+      margin-left: 6.32911%; }
+    #page #colophon .footer .uglyfruit {
+      display: inline;
+      float: left;
+      margin-left: 12.65823%;
+      width: 17.72152%; }

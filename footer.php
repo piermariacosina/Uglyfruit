@@ -13,18 +13,14 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-		<div class="container">
-			<?php
-				/* A sidebar in the footer? Yep. You can can customize
-				 * your footer with three columns of widgets.
-				 */
-				if ( ! is_404() )
-					get_sidebar( 'footer' );
-			?>
-
-			<div id="site-generator">
-				<?php do_action( 'twentyeleven_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyeleven' ) ); ?>" title="<?php esc_attr_e( 'Semantic Personal Publishing Platform', 'twentyeleven' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'twentyeleven' ), 'WordPress' ); ?></a>
+		<div class="footer">
+			<div class="uglyfruit">
+				<h2>uglyfruit</h2>
+				<p></p>
+			</div>
+			<div class="contatti">
+				<h2>Contatti</h2>
+				<p>tel 0119366526</p>
 			</div>
 		</div>
 	</footer><!-- #colophon -->
