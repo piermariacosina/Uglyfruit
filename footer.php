@@ -24,7 +24,7 @@
 				<p>Tel 0119366526</p>
 				<p>Partita IVA 177443322</p>
 			</div>
-			<div class="facebook"></div>
+			<div class="social"></div>
 			<ul class="menu_footer">
 				<li>2012 ugly fruit</li>
 				<li>About us</li>
@@ -33,7 +33,8 @@
 				<li>terms and condition</li>
 				<li>Privacy policy</li>				
 			</ul>
-			
+			<div class="facebook"></div>
+			<div class="twitter"></div>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
