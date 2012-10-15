@@ -72,14 +72,12 @@
 	<header id="branding" role="banner">
 			<div class="container">
 			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img id="site-title" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt ="<?php bloginfo( 'name' ); ?>" /></a>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				
 			</hgroup>			
 				<?php get_search_form(); ?>
-			<!-- <nav id="access" role="navigation">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			</nav><!-- #access --> 
+			
 		</div>
 	</header><!-- #branding -->
 	<div id="header-shade"></div>

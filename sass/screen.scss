@@ -9,6 +9,7 @@
 @import "compass/css3/border-radius";
 @import "compass/css3/opacity";
 @import "compass/utilities/general/clearfix";
+@import "compass/css3/hyphenation";
 @import "susy";
 
 
@@ -18,21 +19,76 @@
 //*COLORS*
 $purple: #5A297E;
 $yellow: #FFA81E;
+
 $green: #1CDD89;
 $orange: #CE4612;
+$bright-orange: #F55417;
 $sand: #E0EADA;
 $pale: #D6E1D0;
 $dark-green: #028E4A;
 $brow:#6A4F51;
+
 @mixin background-sprite($map){
 	background-image: sprite-url($map);
 } 
 
 body.susy {
 	background: $pale image-url('bkgr.png') repeat left top;
+	webkit-font-smoothing: antialiasing;
+}
+
+.page-title{
+	padding: 10px 10px 0 10px;
+	color: $yellow;
+	font-family:arvil_sansregular;
+	font-size:38px;
 	
 }
 
+.entry-title{
+	@include span-columns(9,14);
+	
+	padding: 10px 10px 0 10px;
+	color: $orange;
+	font-family:arvil_sansregular;
+	font-size:38px;
+
+}
+.entry-content{
+	@include span-columns(9,14);
+	
+	p{
+		padding: 5px 10px 10px 10px;
+		font-family:"titilliumtext22l400_wt";
+		font-size:16px !important;
+		color: $brow;
+		line-height: 16px;
+		@include hyphenation;
+		font-weight: 400 !important;
+		
+	}
+}
+#comments{
+	padding: 5px 10px 10px 10px;
+	font-family:"titilliumtext22l400_wt";
+	font-size:16px !important;
+	color: $brow;
+	line-height: 16px;
+	@include hyphenation;
+	font-weight: 400 !important;
+}
+.form-allowed-tags{
+	display: none;
+}
+.entry-meta{
+	padding: 5px 10px 10px 10px;
+	font-family:"titilliumtext22l400_wt";
+	font-size:16px !important;
+	color: $brow;
+	line-height: 16px;
+	@include hyphenation;
+	font-weight: 400 !important;
+}
 .left-shade{
 	
 	background: image-url("shade_left.png") no-repeat;
@@ -49,8 +105,95 @@ body.susy {
 	position: absolute;
 }
 
+.item{
+	background-color: #E5ECE4;
+	border: 1px #DEE6D9 solid;
+	@include span-columns(5);
+	min-height: 150px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	&:hover{
+		background-color: #E79371;
+	}
+	a{
+		text-decoration: none;
+		&:visited{
+			h2{
+				color: #F3C676;
+			}
+		}
+	}
+	h2{
+		padding: 10px 10px 0 10px;
+		color: $purple;
+		font-family:arvil_sansregular;
+		font-size:28px;
+		white-space: normal;
+		font-weight: 400 !important;
+		@include hyphenation;
+	}
+	p{
+		padding: 5px 10px 10px 10px;
+		font-family:"titilliumtext22l400_wt";
+		font-size:16px !important;
+		color: $brow;
+		line-height: 16px;
+		@include hyphenation;
+		font-weight: 400 !important;
+		
+	}
+	@include border-radius(5px);
 
+}
 
+nav#access{
+	margin-top: 1em;
+	
+	@include span-columns(12);
+	@include pre(1);
+	@include post(1);
+	#menu-primary{
+		@include horizontal-list-container;
+		
+		li{
+			@include horizontal-list-item (10px);
+			border-right: 2px #000 solid;
+			&:last-child{
+				border: none;
+			}
+			a{
+				font-family: "arvil_sansregular";
+				@include link-colors(black, $bright-orange, $orange, $orange);
+				font-size: 32px;
+			}
+		}
+	}
+}
+#categories,#categories_menu{
+	@include span-columns(12);
+	@include pre(1);
+	@include post(1);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	li{
+	&.active a{
+		background-color: red;
+	}
+		a{
+			background-color: $yellow;
+			font-size: 14px !important;
+			color: white;
+			font-family: "titilliumtext22l400_wt";
+			text-transform: uppercase;
+			&:hover{
+				background-color: $bright-orange;
+			}
+			&:active, &.active{
+				background-color: $orange;
+			}
+		}
+	}
+}
 #page {
   // page acts as a container for our grid.
 	.container{
@@ -66,30 +209,94 @@ body.susy {
 		height: image-height("shade_top.png");
 		margin-bottom: - image-height("shade_top.png");
 		position: relative;
-		z-index: 50;
+		
 	}
 	
-  // nav spans 3 columns of total 12.
-  nav { @include span-columns(3,12); }
+ 
 	#branding{
 		background-color: $purple;
-		
+		//@include susy-grid-background;
 		padding-top: 76px;
 		padding-bottom: 76px;
 		
 		hgroup{
-			@include span-columns(6);
+			
 		}
 		#site-title{
-			@include replace-text-with-dimensions('logo.png');
+			@include span-columns(6);
 			
+			@include pre(1);
 		}
 		
 		#site-description{
-			
+			clear: both;
+			@include span-columns(6);
 			font-family: "arvil_sansregular";
 			color: white;
+			@include pre(1);
+			
 			font-size: 36px;
+			
+			/* Smartphones (portrait and landscape) ----------- */
+			@media only screen 
+			and (min-device-width : 320px) 
+			and (max-device-width : 480px) {
+			font-size: 16px;
+			}
+			
+			/* Smartphones (landscape) ----------- */
+			@media only screen 
+			and (min-width : 321px) {
+			font-size: 20px;
+			}
+			
+			/* Smartphones (portrait) ----------- */
+			@media only screen 
+			and (max-width : 320px) {
+			font-size: 20px;
+			}
+			
+			/* iPads (portrait and landscape) ----------- */
+			@media only screen 
+			and (min-device-width : 768px) 
+			and (max-device-width : 1024px) {
+			font-size: 30x;
+			}
+			
+			/* iPads (landscape) ----------- */
+			@media only screen 
+			and (min-device-width : 768px) 
+			and (max-device-width : 1024px) 
+			and (orientation : landscape) {
+			font-size: 34px;
+			}
+			
+			/* iPads (portrait) ----------- */
+			@media only screen 
+			and (min-device-width : 768px) 
+			and (max-device-width : 1024px) 
+			and (orientation : portrait) {
+			font-size: 34px;
+			}
+			
+			/* Desktops and laptops ----------- */
+			@media only screen 
+			and (min-width : 1224px) {
+			font-size: 36px;
+			}
+			
+			/* Large screens ----------- */
+			@media only screen 
+			and (min-width : 1824px) {
+			font-size: 36px;
+			}
+			
+			/* iPhone 4 ----------- */
+			@media
+			only screen and (-webkit-min-device-pixel-ratio : 1.5),
+			only screen and (min-device-pixel-ratio : 1.5) {
+			font-size: 24px;
+			}
 			border-top: 2px $green solid;
 			border-bottom: 2px $green solid;
 			text-align: center;
@@ -99,6 +306,7 @@ body.susy {
 		#searchform{
 			@include span-columns(6);
 			@include prefix(2);
+			@include post(1);
 			text-align: right;
 			@include float-right;
 			
@@ -112,16 +320,24 @@ body.susy {
 		.container{
 		background: $sand image-url('bkgr_center.png') repeat left top;
 		position: relative;
-		
+		padding: 0;
+		margin-bottom: 20px;
 			#primary{
 				@include float-left;
 				@include span-columns(16);
-
+				@include susy-grid-background;
 				min-height: image-height("shade_right.png");
+				padding-bottom: 30px;
 			}
 			#content{
-				@include pre(2);
-				@include post(2);
+				@include pre(1);
+				
+				@include post(1);
+				article{
+				
+					
+				}
+				
 			}
 		}
 		
@@ -131,7 +347,7 @@ body.susy {
 		background-color: $yellow;
 		.footer{
 		@include container;
-		@include susy-grid-background;
+		//@include susy-grid-background;
 		h2{
 			text-transform:uppercase;
 			color: $dark-green;
@@ -198,9 +414,55 @@ body.susy {
 	}
 }
 .orange_header{
+			
 			background: image-url('orange_header.png') no-repeat;
 			height:image-height("orange_header.png");
+			padding-top: 40px;
 			@include span-columns(16);
-			margin-left:-10px;
-			margin-right:-10px;
+			overflow: hidden;
+			
+			.circle{
+				background-color: white;
+				width: 220px;
+				height: 220px;
+				@include pre(1);
+				@include float-left;
+				@include border-radius(240px);
+				text-align: center;
+			}
+			h1#title{
+				clear: both;
+				@include span-columns(4);
+				font-family: "arvil_sansregular";
+				color: black;
+				border-top: 2px $green solid;
+				border-bottom: 2px $green solid;
+				text-align: center;
+				font-size: 42px;
+				margin-top: 90px;
+				margin-left: 85px;
+
+				
+			}
+			p#description{
+				font-family:titilliumtext22l400_wt;
+				font-size:14px;
+				
+				@include span-columns(7);
+				@include pre(2);
+				color: white;
+				padding-top: 30px;
+				text-indent: 1em;
+				line-height: 16px; 
+			}
 		}
+
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
