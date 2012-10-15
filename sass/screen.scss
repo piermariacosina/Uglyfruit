@@ -23,7 +23,7 @@ $orange: #CE4612;
 $sand: #E0EADA;
 $pale: #D6E1D0;
 $dark-green: #028E4A;
-$brow: #6A4F51;
+$brow:#6A4F51;
 @mixin background-sprite($map){
 	background-image: sprite-url($map);
 } 
@@ -99,7 +99,7 @@ body.susy {
 		@include susy-grid-background;
 		h2{
 			text-transform:uppercase;
-			color: green;
+			color: $dark-green;
 			margin-top:10px;
 			margin-bottom:10px;
 			font-family:arvil_sansregular;
@@ -109,18 +109,31 @@ body.susy {
 		p{
 			font-family:titilliumtext22l400_wt;
 			font-size:13px;
-			color: grey;
+			color: $brow;
 		}
 		.contatti{
 			@include float-left;
 			@include pre(1); 
-			@include span-columns(3);
+			@include span-columns(4);
 		}
 		
 		.uglyfruit{
 			@include float-left;
-			@include pre(2);
-			@include span-columns(3);
+			@include pre(1);
+			@include span-columns(4);
+		}
+		.facebook{
+			height:100px;
+		}
+		ul{
+			  @include horizontal-list-container;
+			  li{
+			  	@include horizontal-list-item;
+				font-family:titilliumtext22l400_wt;
+				font-size:13px;
+				color: $brow;
+				border-right:solid 1px $brow;
+				}
 		}
 		}
 	}
