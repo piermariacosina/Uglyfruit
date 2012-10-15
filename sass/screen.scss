@@ -72,8 +72,27 @@ body.susy {
 	#branding{
 		background-color: $purple;
 		
+		padding-top: 76px;
+		padding-bottom: 76px;
 		#site-title{
 			@include replace-text-with-dimensions('logo.png');
+			@include span-columns(6)
+		}
+		
+		#site-description{
+			@include span-columns(6);
+			font-family: "arvil_sansregular";
+			color: white;
+			font-size: 41px;
+			border-top: 2px $green solid;
+			border-bottom: 2px $green solid;
+		}
+		
+		#searchform{
+			@include span-columns(6);
+			@include prefix(2);
+			text-align: right;
+			@include float-right;
 		}
 	}
 	#main{
@@ -86,6 +105,7 @@ body.susy {
 				@include span-columns(12);
 				@include pre(2);
 				@include post(2);
+				min-height: image-height("shade_right.png");
 			}
 		}
 		
