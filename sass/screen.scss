@@ -22,6 +22,8 @@ $green: #1CDD89;
 $orange: #CE4612;
 $sand: #E0EADA;
 $pale: #D6E1D0;
+$dark-green: #028E4A;
+$brow;
 @mixin background-sprite($map){
 	background-image: sprite-url($map);
 } 
@@ -32,13 +34,21 @@ body.susy {
 }
 
 .left-shade{
+	
+	background: image-url("shade_left.png") no-repeat;
 	width: image-width("shade_left.png");
 	height: image-height("shade_left.png");
+	left:- image-width("shade_left.png");
+	position: absolute;
 }
 .right-shade{
+	background: image-url("shade_right.png") no-repeat ;
 	width: image-width("shade_right.png");
-	height: image-height("shade_left.png");
+	height: image-height("shade_right.png");
+	right:- image-width("shade_right.png");
+	position: absolute;
 }
+
 
 
 #page {
@@ -70,7 +80,17 @@ body.susy {
 	#main{
 		.container{
 		background: $sand image-url('bkgr_center.png') repeat left top;
+		position: relative;
+		
+			#primary{
+				@include float-left;
+				@include span-columns(12);
+				@include pre(2);
+				@include post(2);
+			}
 		}
+		
+		
 	}
 	#colophon{
 		background-color: $yellow;
