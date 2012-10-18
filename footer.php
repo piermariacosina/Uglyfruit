@@ -13,7 +13,8 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-		<div class="footer">
+		
+			<div class="container">
 			<div class="uglyfruit">
 				<h2>uglyfruit</h2>
 				<p> Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut</p>
@@ -36,6 +37,7 @@
 			<div class="facebook"></div>
 			<div class="twitter"></div>
 		</div>
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 

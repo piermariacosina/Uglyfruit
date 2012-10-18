@@ -108,10 +108,11 @@ body.susy {
 .item{
 	background-color: #E5ECE4;
 	border: 1px #DEE6D9 solid;
-	@include span-columns(5);
+	width: 185px;
 	min-height: 150px;
-	margin-top: 1px;
-	margin-bottom: 1px;
+	
+	margin: 3px;
+	
 	&:hover{
 		background-color: #E79371;
 	}
@@ -198,7 +199,7 @@ nav#access{
   // page acts as a container for our grid.
 	.container{
 		@include container;
-		//@include susy-grid-background;
+		@include susy-grid-background;
 	}
   // header and footer are full-width by default.
   header, footer { clear: both; }
@@ -215,81 +216,32 @@ nav#access{
  
 	#branding{
 		background-color: $purple;
-		//@include susy-grid-background;
-		padding-top: 76px;
-		padding-bottom: 76px;
 		
+		padding-top: 76px;
+		padding-bottom: 56px;
 		hgroup{
-			
-		}
-		#site-title{
-			@include span-columns(6);
-			
+			@include float-left;
 			@include pre(1);
+			margin-bottom: 20px;
+		}
+		
+		#site-title{
+			width: 220px;
+			
+			
 		}
 		
 		#site-description{
 			clear: both;
-			@include span-columns(6);
+			width: 220px;
+			
 			font-family: "arvil_sansregular";
 			color: white;
-			@include pre(1);
 			
-			font-size: 36px;
 			
-			/* Smartphones (portrait and landscape) ----------- */
-			@media only screen 
-			and (min-device-width : 320px) 
-			and (max-device-width : 480px) {
-			font-size: 16px;
-			}
+			font-size: 32px;
 			
-			/* Smartphones (landscape) ----------- */
-			@media only screen 
-			and (min-width : 321px) {
-			font-size: 20px;
-			}
-			
-			/* Smartphones (portrait) ----------- */
-			@media only screen 
-			and (max-width : 320px) {
-			font-size: 20px;
-			}
-			
-			/* iPads (portrait and landscape) ----------- */
-			@media only screen 
-			and (min-device-width : 768px) 
-			and (max-device-width : 1024px) {
-			font-size: 30x;
-			}
-			
-			/* iPads (landscape) ----------- */
-			@media only screen 
-			and (min-device-width : 768px) 
-			and (max-device-width : 1024px) 
-			and (orientation : landscape) {
-			font-size: 34px;
-			}
-			
-			/* iPads (portrait) ----------- */
-			@media only screen 
-			and (min-device-width : 768px) 
-			and (max-device-width : 1024px) 
-			and (orientation : portrait) {
-			font-size: 34px;
-			}
-			
-			/* Desktops and laptops ----------- */
-			@media only screen 
-			and (min-width : 1224px) {
-			font-size: 36px;
-			}
-			
-			/* Large screens ----------- */
-			@media only screen 
-			and (min-width : 1824px) {
-			font-size: 36px;
-			}
+
 			
 			/* iPhone 4 ----------- */
 			@media
@@ -304,11 +256,21 @@ nav#access{
 		}
 		
 		#searchform{
-			@include span-columns(6);
-			@include prefix(2);
-			@include post(1);
+			@include span-columns(10);
+			@include pre(1);
 			text-align: right;
-			@include float-right;
+			
+				.input-append{
+					width: 100%;
+					max-width: 240px;
+					#s{
+						width: 60%;
+					}
+					#searchsubmit{
+						width: 40%;
+					}
+				}
+			
 			
 			label{
 				display: none;
@@ -345,9 +307,7 @@ nav#access{
 	}
 	#colophon{
 		background-color: $yellow;
-		.footer{
-		@include container;
-		//@include susy-grid-background;
+		
 		h2{
 			text-transform:uppercase;
 			color: $dark-green;
@@ -363,13 +323,13 @@ nav#access{
 			color: $brow;
 		}
 		.contatti{
-			@include float-left;
+			
 			@include pre(1); 
 			@include span-columns(4);
 		}
 		
 		.uglyfruit{
-			@include float-left;
+			
 			@include pre(1);
 			@include span-columns(4);
 		}
@@ -411,11 +371,11 @@ nav#access{
 			margin-top: -5px;
 		}
 		}
-	}
+	
 }
 .orange_header{
 			
-			background: image-url('orange_header.png') no-repeat;
+			background: image-url('orange_header.png') repeat-x;
 			height:image-height("orange_header.png");
 			padding-top: 40px;
 			@include span-columns(16);
