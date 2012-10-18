@@ -170,7 +170,7 @@ nav#access{
 		}
 	}
 }
-#categories,#categories_menu{
+#categories,#categories_menu,#categories_post{
 	@include span-columns(12);
 	@include pre(1);
 	@include post(1);
@@ -186,6 +186,7 @@ nav#access{
 			color: white;
 			font-family: "titilliumtext22l400_wt";
 			text-transform: uppercase;
+			
 			&:hover{
 				background-color: $bright-orange;
 			}
