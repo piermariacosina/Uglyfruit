@@ -13,7 +13,8 @@
 	</div><!-- #main -->
 
 	<footer id="colophon" role="contentinfo">
-		<div class="footer">
+		
+			<div class="container">
 			<div class="uglyfruit">
 				<h2><?php the_field("cose-titolo","options") ?></h2>
 				<p> <?php the_field("cose-paragrafi","options") ?></p>
@@ -31,6 +32,7 @@
 			<div class="facebook"></div>
 			<div class="twitter"></div>
 		</div>
+		
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
