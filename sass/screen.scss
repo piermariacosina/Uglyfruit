@@ -55,7 +55,8 @@ body.susy {
 
 }
 .entry-content{
-	@include span-columns(9,14);
+	
+
 	
 	p{
 		padding: 5px 10px 10px 10px;
@@ -65,7 +66,15 @@ body.susy {
 		line-height: 16px;
 		@include hyphenation;
 		font-weight: 400 !important;
-		
+		clear: both;
+		@include span-columns(9);
+		a{
+			@include span-columns(15,9);
+			img{
+				width: 100% ;
+			}
+			
+		}
 	}
 }
 #comments{
