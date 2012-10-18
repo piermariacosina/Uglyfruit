@@ -5,9 +5,9 @@ get_header(); ?>
 			
 			<div class="orange_header">
 				<div class="circle">
-					<h1 id="title">blog</h1>
+					<h1 id="title"> <?php the_field("blog-titolo","options")?></h1>
 				</div>
-				<p id="description">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+				<p id=description><?php the_field("blog-descrizione","options")?></p>
 			</div>
 			<nav id="access" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>

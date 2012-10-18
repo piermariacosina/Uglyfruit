@@ -384,12 +384,20 @@ nav#access{
 			  @include float-left;
 			  li{
 			  	@include horizontal-list-item;
-				font-family:titilliumtext22l400_wt;
-				font-size:11px;
+				
 				padding-left:5px;
 				padding-right:5px;
-				color: $brow;
+
 				border-right:solid 1px $brow;
+				a{
+					font-family:titilliumtext22l400_wt;
+					font-size:11px;
+					color: $brow;
+					text-decoration: none;
+				}
+				a:hover, a:visited{
+					color: $dark-green;
+				}
 				}
 			  li:last-child{
 				border-right:none;
