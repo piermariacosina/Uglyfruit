@@ -176,6 +176,14 @@ nav#access{
 	@include post(1);
 	padding-top: 20px;
 	padding-bottom: 20px;
+	
+	h3{
+		font-family: "arvil_sansregular";
+		color: $orange;
+		font-size: 24px;
+		margin-bottom: 3px;
+	}
+	
 	li{
 	&.active a{
 		background-color: red;
@@ -320,6 +328,12 @@ hr{
 	//			@include susy-grid-background;
 				min-height: image-height("shade_right.png");
 				padding-bottom: 30px;
+				hr{
+					margin: 0;
+					@include pre(1);
+					@include post(1);
+					@include span-columns(9);
+				}
 			}
 			#content{
 				@include pre(1);
@@ -715,7 +729,7 @@ a.comment-reply-link > span {
 }
 #respond .form-submit {
 	float: right;
-	margin: -20px 0 10px;
+	margin: -20px 40px 10px;
 }
 #respond input#submit {
 	border: none;

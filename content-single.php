@@ -34,10 +34,13 @@
 			$categories_list = get_the_category_list();
 			
 			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list();
+			$tag_list = get_the_tag_list('<ul><li>','</li><li>','</li></ul>');
 			if ( '' != $tag_list ) {
+				echo '<h3>Tags</h3>';
 				echo $tag_list;
-			} elseif ( '' != $categories_list ) {
+			}
+			if ( '' != $categories_list ) {
+				echo '<h3>Categories</h3>';
 				 echo $categories_list;
 			} else {
 				 
