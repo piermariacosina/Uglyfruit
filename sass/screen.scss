@@ -182,7 +182,7 @@ nav#access{
 	}
 }
 #categories,#categories_menu,#categories_post{
-	@include span-columns(12);
+	@include span-columns(9);
 	@include pre(1);
 	@include post(1);
 	padding-top: 20px;
@@ -207,11 +207,25 @@ nav#access{
 		}
 	}
 }
-.freccia-d{
-	background: image-url("freccia-d.png") no-repeat;	
-}
-.freccia-sx{
-	background: image-url("freccia-sx.png") no-repeat;	
+.frecce{
+	@include span-columns(9);
+text-align:center;
+	.nav-previous{
+
+		a{
+			display:inline-block;
+			@include replace-text-with-dimensions("freccia-sx.png");
+
+		}
+	}
+	.nav-next {
+		a{
+			display:inline-block;
+			@include replace-text-with-dimensions("freccia-dx.png");
+						
+		}
+			
+	}
 }
 #categories_post{
 
