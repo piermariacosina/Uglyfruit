@@ -12,18 +12,21 @@
 	<header class="entry-header">
 		<h1 class="entry-title"><?php the_title(); ?></h1>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php twentyeleven_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
+		
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
+		<?php if ( 'post' == get_post_type() ) : ?>
+		<div class="entry-meta">
+			<p>
+			<?php the_date() ?> <br/>By <?php the_author() ?>
+			</p>
+		</div><!-- .entry-meta -->
+		<?php endif; ?>
 	</div><!-- .entry-content -->
-
+	<hr>
 	<footer class="entry-meta">
 		<div id="categories_post">
 		<?php

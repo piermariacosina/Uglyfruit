@@ -11,5 +11,7 @@ $('#categories a').click(function(){
   $container.isotope({ filter: selector });
   return false;
 });
+$('div#categories_post > ul').addClass("nav nav-pills");
+
 });
 })(jQuery);
