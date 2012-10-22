@@ -6,19 +6,22 @@ if ( !function_exists( 'bp_dtheme_enqueue_styles' ) ) :
 		wp_register_style( 'bootstrap', get_stylesheet_directory_uri() . '/bootstrap/css/bootstrap.css', array(), $version, 'screen, projection' );
 
 		wp_register_style( 'screen', get_stylesheet_directory_uri() . '/screen.css', array(), $version, 'screen, projection' );
-
+		wp_register_style( 'flexslider-css', get_stylesheet_directory_uri() . '/flexslider.css', array(), $version, 'screen, projection' );
 wp_register_script( 'isotope',  get_stylesheet_directory_uri() . '/js/jquery.isotope.min.js', array(), $version, false );
 wp_register_script( 'isotope_main',  get_stylesheet_directory_uri() . '/js/isotope.js', array(), $version, false );
-
+wp_register_script( 'flexslider-lib',  get_stylesheet_directory_uri() . '/js/jquery.flexslider-min.js', array(), $version, false );
+wp_register_script( 'flexslider',  get_stylesheet_directory_uri() . '/js/flexslider.js', array(), $version, false );
 
 
 wp_enqueue_script('jquery',false, array(), $version, true);
 wp_enqueue_script('isotope',false, array('jquery'), $version, true);
 wp_enqueue_script('isotope_main',false, array('isotope'), $version, true);
+wp_enqueue_script('flexslider-lib',false, array('jquery'), $version, true);
+wp_enqueue_script('flexslider',false, array('flexslider-lib'), $version, true);
 
 		wp_enqueue_style( 'bootstrap' );
 		wp_enqueue_style( 'screen' );
-
+				wp_enqueue_style( 'flexslider-css' );
 
 	}
 

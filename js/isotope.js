@@ -14,4 +14,7 @@ $('#categories a').click(function(){
 $('div#categories_post > ul').addClass("nav nav-pills");
 
 });
+  
 })(jQuery);
+
+

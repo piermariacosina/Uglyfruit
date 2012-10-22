@@ -428,15 +428,92 @@ hr{
 		}
 	
 }
+.dizionario{
+			@include span-columns(16);	
+			@include clearfix;
+			h1#ugly{
+				font-family: "arvil_sansregular";
+				color: black;
+				font-size: 42px;
+				margin-top: 10px;
+				@include pre(1);
+				span{
+				font-family:titilliumtext22l400_wt;
+					font-size: 25px;
+					color:grey;
+				}
+			}
+			p{
+				margin-top:10px;
+				font-family:times;
+				font-size:20px;
+				@include span-columns(7);
+				@include pre(1);
+				color: grey; 
+			}
+			p#tipo{
+				font-size:16px;
+			}
+}
+ol{
+	@include span-columns(7);
+	font-family: "arvil_sansregular";
+	color: black;
+	font-size: 25px;
+	@include pre(1);
+	li{padding:10px;}
+}
+.slides{
+	.pippo{
+
+		max-width: 300px;
+max-height: 300px;
+position: absolute;
+top: 20px;
+padding: 20px 30px 20px 30px;
+display: inline;
+float: left;
+margin-left: 10px;
+margin-right: 10px;
+width: 400px;
+	}
+}
+.spiegazione{
+			@include span-columns(12);
+			@include pre(2);
+			background-color:$purple;	
+			@include clearfix;
+			h1#titolo{
+				font-family: "arvil_sansregular";
+				color: $green;
+				font-size: 42px;
+				margin-top: 10px;
+				text-align:center;
+				span{
+					text-decoration:underline
+				}
+			}
+			p{
+				margin-top:10px;
+				font-family: "arvil_sansregular";
+				font-size:20px;
+				@include span-columns(12,14);
+				@include pre(1);
+				color: white; 
+			}
+			p#tipo{
+				font-size:16px;
+			}
+}
 .orange_header{
 			
 			background: image-url('orange_header.png') repeat-x;
 			height:image-height("orange_header.png");
-			padding-top: 40px;
 			@include span-columns(16);
 			overflow: hidden;
 			
 			.circle{
+				margin-top:40px;
 				background-color: white;
 				width: 220px;
 				height: 220px;
@@ -446,8 +523,9 @@ hr{
 				text-align: center;
 			}
 			h1#title{
+
 				clear: both;
-				@include span-columns(4);
+				@include span-columns(5);
 				font-family: "arvil_sansregular";
 				color: black;
 				border-top: 2px $green solid;
@@ -455,11 +533,29 @@ hr{
 				text-align: center;
 				font-size: 42px;
 				margin-top: 90px;
-				margin-left: 85px;
-
-				
+				margin-left: 79px;	
 			}
+			
+			p#description2{
+				margin-top:70px;
+				font-family:titilliumtext22l400_wt;
+				font-size:20px;
+				text-transform: uppercase;
+				@include span-columns(5);
+				@include pre(2);
+				color: white;
+				padding-top: 30px;
+
+				text-indent: 1em;
+
+			}
+}
+.continuazione{
+			background-color:$green;
+			@include span-columns(16);
+			@include clearfix;
 			p#description{
+
 				font-family:titilliumtext22l400_wt;
 				font-size:14px;
 				
@@ -469,10 +565,21 @@ hr{
 				padding-top: 30px;
 				text-indent: 1em;
 				line-height: 16px; 
+				padding-bottom:60px;
 			}
-		}
+			p#presentazione{
 
+				font-family:titilliumtext22l400_wt;
+				font-size:20px;
+				text-transform: uppercase;
+				@include span-columns(7);
+				@include pre(2);
+				color: $purple;
+				padding-top: 30px;
+				text-indent: 1em;
 
+			}
+}
 .isotope-item {
   z-index: 2;
 }
