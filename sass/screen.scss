@@ -280,7 +280,8 @@ hr{
 			text-decoration:none;
 			font-family:"titilliumtext22l400_wt";
 			font-size:14px;
-			
+			margin-top: 5px;
+			margin-bottom: 5px;
 			line-height:image-height("rss-icon.png");
 			
 		}
@@ -310,10 +311,12 @@ hr{
 		}
 		
 		.toolbar{
-			@include span-columns(10);
+			@include span-columns(10 omega);
 			@include pre(1);
 			text-align: right;
-			
+				form{
+					margin-right: 30px;
+				}
 				.input-append{
 					width: 100%;
 					max-width: 240px;
