@@ -38,11 +38,11 @@ get_header(); ?>
 				<div class="circle">
 					<h1 id="title">buyer</h1>
 				</div>
-				<p id= "description2">62 % of shoppers search for digitally for at leaast half of their shopping trips</p>
+				<p class= "description">62 % of shoppers search for digitally for at leaast half of their shopping trips</p>
 			</div>
 			<div class="continuazione">
 				<p id = "presentazione"> commerce will become dynamic and based on consumers' generated request</p>
-				<p id="description"> The hardest thing about B2c selling today is that the customers don't need yuo the way they used to.
+				<p class="description"> The hardest thing about B2c selling today is that the customers don't need yuo the way they used to.
 				Internet has significantly increased the bargaining power of consumers. Retailers have come to realiza that the challange
 				is not simply to attract customers to their site or physical store, but to actually convert visitors to purchaser.
 				</p>	
@@ -51,12 +51,12 @@ get_header(); ?>
 				<div class="circle">
 					<h1 id="title">seller</h1>
 				</div>
-				<p id= "description2">e-shopper expect: convenience, multi-channel, real, time, dialogue, engagement and control.</p>
+				<p class= "description">e-shopper expect: convenience, multi-channel, real, time, dialogue, engagement and control.</p>
 				
 			</div>
 			<div class="continuazione">
 				<p id = "presentazione">uglyfruit takes your customers out of the shadow for you!</p>
-				<p id="description">The rise and rise of e-shopping and m-shopping, is a fantastic chance for retailers to angage with their customers like never before. 
+				<p class="description">The rise and rise of e-shopping and m-shopping, is a fantastic chance for retailers to angage with their customers like never before. 
 				A new breed of inoovative retailers is now emerging, gaining first mover advantage by embracing the potential offerde by revolutionnary changes that are effecting the way goods are being sold.
 				In this marketing sphere, you should always be aware of the right moment to profit from the opprtunity and when the time gets right, be ready for customers who are ready to buy UglyFruit provides
 				 you with personalized client management which will enable you to communicate the right essage to the right client at the right place in the right time!s</p>	

@@ -7,8 +7,9 @@ get_header(); ?>
 				<div class="circle">
 					<h1 id="title"> <?php the_field("blog-titolo","options")?></h1>
 				</div>
-				<p id=description><?php the_field("blog-descrizione","options")?></p>
+				<p class="description"><?php the_field("blog-descrizione","options")?></p>
 			</div>
+			<div class="shade-grey"></div>
 			<nav id="access" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav><!-- #access -->
