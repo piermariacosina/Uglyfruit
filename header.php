@@ -75,10 +75,13 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img id="site-title" src="<?php bloginfo('stylesheet_directory'); ?>/images/logo.png" alt ="<?php bloginfo( 'name' ); ?>" /></a>
 				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
 				
-			</hgroup>			
+			</hgroup>	
+			<div class="toolbar">		
 				<?php get_search_form(); ?>
-			
+					<a class="rss" href="<?php bloginfo('rss_url'); ?>"> Subscribe via</a> 
+			</div>
 		</div>
+
 	</header><!-- #branding -->
 	<div id="header-shade"></div>
 	<div id="main">
