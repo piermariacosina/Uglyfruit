@@ -507,13 +507,14 @@ width: 400px;
 }
 .orange_header{
 			
-			background: image-url('orange_header.png') repeat-x;
-			height:image-height("orange_header.png");
+			@include background(image-url("orange-shade.png") repeat-x left top, image-url("orange-bottom.png") repeat-x left bottom,image-url("orange.png") repeat left top);
+			padding-top:40px;
 			@include span-columns(16);
 			overflow: hidden;
+			padding-bottom: 30px;
 			
 			.circle{
-				margin-top:40px;
+				
 				background-color: white;
 				width: 220px;
 				height: 220px;
@@ -521,6 +522,7 @@ width: 400px;
 				@include float-left;
 				@include border-radius(240px);
 				text-align: center;
+				
 			}
 			h1#title{
 
@@ -536,12 +538,12 @@ width: 400px;
 				margin-left: 79px;	
 			}
 			
-			p#description2{
-				margin-top:70px;
-				font-family:titilliumtext22l400_wt;
-				font-size:20px;
-				text-transform: uppercase;
-				@include span-columns(5);
+			p.description{
+				
+				font-family:"titilliumtext22l400_wt";
+				font-size:14px;
+				
+				@include span-columns(8);
 				@include pre(2);
 				color: white;
 				padding-top: 30px;
@@ -550,13 +552,19 @@ width: 400px;
 
 			}
 }
+
+.shade-grey{
+	background:image-url("shade-grey.png") repeat-x left top;
+	height: image-height("shade-grey.png");
+	clear: both;
+}
 .continuazione{
 			background-color:$green;
 			@include span-columns(16);
 			@include clearfix;
-			p#description{
+			p.description{
 
-				font-family:titilliumtext22l400_wt;
+				font-family:"titilliumtext22l400_wt";
 				font-size:14px;
 				
 				@include span-columns(7);
